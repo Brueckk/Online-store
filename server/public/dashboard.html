@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Online Store</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
-    <h1>Bienvenido al Dashboard de la Tienda en Línea</h1>
-    <button onclick="window.location.href='/register'">Registrarse</button>
-    <button onclick="window.location.href='/login'">Iniciar Sesión</button>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Bienvenido al Dashboard de la Tienda en Línea</h1>
+        <p class="dashboard-subtitle">Seleccione una opción para continuar:</p>
+        <div class="button-container">
+            <button class="button-primary" onclick="window.location.href='/register'">Registrarse</button>
+            <button class="button-secondary" onclick="window.location.href='/login'">Iniciar Sesión</button>
+        </div>
+    </div>
 </body>
 </html>
-
-

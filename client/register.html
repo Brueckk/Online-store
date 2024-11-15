@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Online Store</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
-    <h1>Registrarse</h1>
-    <form id="registerForm">
-        <input type="text" name="username" placeholder="Nombre de usuario" required>
-        <input type="password" name="password" placeholder="Contraseña" required>
-        <button type="submit">Registrar</button>
-    </form>
-    <p id="responseMessage"></p>
+<body class="register-body">
+    <div class="register-container">
+        <h1 class="register-title">Crear una Cuenta</h1>
+        <form id="registerForm" class="register-form">
+            <input type="text" name="username" placeholder="Nombre de usuario" required class="input-field">
+            <input type="password" name="password" placeholder="Contraseña" required class="input-field">
+            <button type="submit" class="button-primary">Registrar</button>
+        </form>
+        <p id="responseMessage" class="response-message"></p>
+    </div>
     <script src="/static/js/register.js"></script>
 </body>
 </html>

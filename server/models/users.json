@@ -13,5 +13,10 @@
     "username": "1110362743",
     "password": "$2b$10$7nK6niABXT1Znf824ld6ROMVq.eOj7FMho7reyKxFkasmqmAOTxru",
     "role": "client"
+  },
+  {
+    "username": "thomas",
+    "password": "$2b$10$NKJUI0Kp1GZu06eft66Lb.q1F712E8ahS5W.99GIdniRI1TxBX5AS",
+    "role": "client"
   }
 ]

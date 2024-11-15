@@ -71,3 +71,75 @@ body, html {
 .button-secondary:hover {
     background-color: var(--primary-lightest);
 }
+
+
+/* Estilos de página de inicio de sesión y registro */
+.register-body, .login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-gray);
+    font-family: var(--font-primary);
+}
+
+.register-container, .login-container {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.register-title, .login-title {
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    margin-bottom: 1rem;
+}
+
+.register-form, .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-field {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--primary-lightest);
+    border-radius: 5px;
+    background-color: var(--bg-gray);
+    color: var(--primary-black);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--primary-medium);
+}
+
+.button-primary {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: var(--primary-medium);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.response-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--primary-black);
+}
+
+
