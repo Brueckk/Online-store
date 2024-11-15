@@ -1,18 +1,29 @@
 <!-- client/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Online Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-  <div id="app">
-    <h1>Online Store</h1>
-    <button onclick="loadProducts()">View Products</button>
-    <div id="product-list"></div>
-  </div>
-  <script src="js/main.js"></script>
+    <h1>Bienvenido a la Tienda</h1>
+
+    <!-- Sección solo para clientes (oculta por defecto) -->
+    <div id="clientSection" style="display: none;">
+        <h2>Zona de Clientes</h2>
+        <p>Bienvenido, aquí están tus opciones como cliente.</p>
+        <!-- Agrega aquí funciones específicas del cliente -->
+    </div>
+
+    <!-- Sección solo para administrador (oculta por defecto) -->
+    <div id="adminSection" style="display: none;">
+        <h2>Zona de Administración</h2>
+        <p>Bienvenido, aquí están tus opciones como administrador.</p>
+        <!-- Agrega aquí funciones específicas del administrador -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script type="module" src="/static/js/role.js"></script>
 </body>
 </html>

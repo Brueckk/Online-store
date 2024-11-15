@@ -1,0 +1,14 @@
+
+:root {
+    /* Colores */
+    --bg-white: #FAFAFD;
+    --bg-gray: #EAEBF9;
+    --primary-lightest: #D5D7F2;
+    --primary-black: #121670;
+    --primary-light: #8D92F2;
+    --primary-medium: #636AF2;
+    --primary-dark: #3D46F2;
+
+    /* Fuente */
+    --font-primary: 'Plus Jakarta Sans', sans-serif;
+}

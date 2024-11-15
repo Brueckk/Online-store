@@ -1,16 +1,20 @@
-// server/models/Product.js
 const fs = require('fs');
-const path = './data/products.json';
+const path = require('path');
 
-class Product {
-  static getAllProducts() {
-    return JSON.parse(fs.readFileSync(path, 'utf8'));
-  }
+// Ruta donde se almacenarán los productos
+const productsFilePath = path.join(__dirname, 'products.json');
 
-  static addProduct(newProduct) {
-    const products = Product.getAllProducts();
-    products.push(newProduct);
-    fs.writeFileSync(path, JSON.stringify(products));
-  }
+// Función para leer los productos
+function readProducts() {
+    if (!fs.existsSync(productsFilePath)) return [];
+    const data = fs.readFileSync(productsFilePath);
+    return JSON.parse(data);
 }
-module.exports = Product;
+
+// Función para escribir productos
+function writeProducts(products) {
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+}
+
+// Exporta las funciones para usarlas en Products.js
+module.exports = { readProducts, writeProducts };

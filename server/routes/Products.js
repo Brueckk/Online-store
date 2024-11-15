@@ -1,16 +1,20 @@
-// server/routes/products.js
 const express = require('express');
-const Product = require('../models/Product');
 const router = express.Router();
+const { readProducts, writeProducts } = require('../models/Product');
 
-router.post('/', (req, res) => {
-  const newProduct = req.body;
-  Product.addProduct(newProduct);
-  res.status(201).json({ message: 'Product added' });
+// Ruta para obtener todos los productos
+router.get('/', (req, res) => {
+    const products = readProducts();
+    res.json(products);
 });
 
-router.get('/', (req, res) => {
-  res.json(Product.getAllProducts());
+// Ruta para agregar un nuevo producto
+router.post('/add', (req, res) => {
+    const products = readProducts();
+    const newProduct = req.body;
+    products.push(newProduct);
+    writeProducts(products);
+    res.status(201).json({ message: 'Product added successfully' });
 });
 
 module.exports = router;

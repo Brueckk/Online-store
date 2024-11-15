@@ -1,0 +1,17 @@
+[
+  {
+    "username": "JuanP",
+    "password": "$2b$10$troJCBUmdABqVybIQKSjcuq6v4MzFonpczGHxiQOzc9Xga0ZEfVQ6",
+    "role": "admin"
+  },
+  {
+    "username": "prueba",
+    "password": "$2b$10$mcjTOGxF6.Tviy1exokWE.3azLVMpUB4Bksmn30KIr/QccLbJJvh2",
+    "role": "client"
+  },
+  {
+    "username": "1110362743",
+    "password": "$2b$10$7nK6niABXT1Znf824ld6ROMVq.eOj7FMho7reyKxFkasmqmAOTxru",
+    "role": "client"
+  }
+]
