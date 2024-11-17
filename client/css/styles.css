@@ -1,14 +1,6 @@
 
 @import url('variables.css');
 
-/* Estilos generales */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-primary);
-    background-color: var(--bg-white);
-    color: var(--primary-black);
-}
 
 .dashboard-body {
     display: flex;
@@ -20,7 +12,7 @@ body, html {
 
 .dashboard-container {
     text-align: center;
-    background-color: var(--bg-white);
+    background-color: var(--bg-gray);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -79,7 +71,7 @@ body, html {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--bg-gray);
+    background-color: var(--primary-medium);
     font-family: var(--font-primary);
 }
 
@@ -321,4 +313,56 @@ body, html {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
+    flex-shrink: 0; /* No permitir que el footer se reduzca */
 }
+
+.dashboard-body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background: var(--primary-medium);
+    color: var(--primary-medium);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--primary-medium);
+    color: var(--primary-black);
+    display: flex;
+    flex-direction: column; /* Organización en columna */
+    height: 100vh; /* Altura completa de la pantalla */
+}
+
+.navbar {
+    background-color: var(--primary-black);
+    padding: 1rem;
+    text-align: center;
+    color: var(--bg-white);
+    justify-content: center; /* Centrar horizontalmente */
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed; /* Fijar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe toda la anchura */
+    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+}
+
+.footer {
+    background-color: var(--primary-black);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: fixed; /* Fijar en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe toda la anchura */
+}
+
