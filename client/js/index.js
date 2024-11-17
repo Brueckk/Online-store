@@ -1,7 +1,31 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const token = localStorage.getItem('token');
     const productList = document.getElementById('product-list');
-    const addProductButton = document.getElementById('addProductButton');
-    const cartButton = document.getElementById('cartButton'); // Botón de carrito
+    const cartButton = document.getElementById('cartButton');
+    const clientSection = document.getElementById('clientSection');
+    const adminSection = document.getElementById('adminSection');
+
+    if (!token) {
+        alert('No has iniciado sesión.');
+        window.location.href = '/login';
+        return;
+    }
+
+    try {
+        const decoded = jwt_decode(token);
+        const userRole = decoded.role;
+
+        if (userRole === 'admin') {
+            // Ocultar secciones de cliente y carrito
+            clientSection.style.display = 'none';
+            cartButton.style.display = 'none';
+        } else if (userRole === 'client') {
+            // Mostrar secciones de cliente
+            adminSection.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('Error al decodificar el token:', error);
+    }
 
     // Redirigir al carrito
     cartButton.addEventListener('click', () => {
@@ -9,13 +33,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     try {
+        // Obtener el rol del usuario desde el token almacenado
+        const token = localStorage.getItem('token');
+        let userRole = null;
+    
+        if (token) {
+            const decoded = jwt_decode(token);
+            userRole = decoded.role; // Obtenemos el rol del usuario
+        }
+    
         // Cargar lista de productos
         const response = await fetch('/api/products/list');
         const data = await response.json();
-
+    
         if (response.ok) {
             const products = data.products;
-
+    
             // Mostrar mensaje si no hay productos
             if (products.length === 0) {
                 productList.innerHTML = '<p>No hay productos disponibles.</p>';
@@ -25,15 +58,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const productCard = document.createElement('div');
                     productCard.classList.add('product-card');
                     productCard.dataset.id = product.id; // Asegúrate de que el ID del producto esté disponible
-
+    
+                    // Botón "Agregar al Carrito" solo para clientes
+                    const addToCartButton = userRole === 'client' 
+                        ? `<button class="add-to-cart-button">Agregar al Carrito</button>` 
+                        : '';
+    
                     productCard.innerHTML = `
                         <h3 class="product-name">${product.name}</h3>
                         <p class="product-description">${product.description}</p>
                         <p class="product-price">Precio: $${product.price.toFixed(2)}</p>
                         <p class="product-quantity">Disponibles: ${product.quantity}</p>
-                        <button class="add-to-cart-button">Agregar al Carrito</button>
+                        ${addToCartButton}
                     `;
-
+    
                     productList.appendChild(productCard);
                 });
             }

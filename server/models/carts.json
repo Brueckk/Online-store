@@ -11,5 +11,18 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "username": "JuanP",
+    "products": [
+      {
+        "productId": "1731810543120",
+        "quantity": 2
+      },
+      {
+        "productId": "1731810901659",
+        "quantity": 1
+      }
+    ]
   }
 ]

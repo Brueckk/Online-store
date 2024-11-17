@@ -1,6 +1,6 @@
 [
   {
-    "username": "JuanP",
+    "username": "ADMIN",
     "password": "$2b$10$troJCBUmdABqVybIQKSjcuq6v4MzFonpczGHxiQOzc9Xga0ZEfVQ6",
     "role": "admin"
   },
@@ -42,6 +42,21 @@
   {
     "username": "qwerr",
     "password": "$2b$10$BlI8GaK.fzb3qRyRABCYeeV1D.wyBGIWIXmj0qtihOq1hc3AObIAu",
+    "role": "client"
+  },
+  {
+    "username": "mango",
+    "password": "$2b$10$AIzqt5tnOjoXT3AQ0IaYo.XLjbGSzM16o6aQFRZXSsdeBltL6GQYC",
+    "role": "client"
+  },
+  {
+    "username": "amorocho",
+    "password": "$2b$10$aKqh9egc8KolDapha3sns.TOWmkv58.NsSl/TUm8RLXjfecJ0pUhq",
+    "role": "client"
+  },
+  {
+    "username": "max",
+    "password": "$2b$10$8gz3tz1v4sTR50wtJzY0/eaiyt7qDcJ4czntBaXA5eTI53WzzH03G",
     "role": "client"
   }
 ]
