@@ -1,14 +1,13 @@
-
 :root {
     /* Colores */
-    --bg-white: #FAFAFD;
-    --bg-gray: #EAEBF9;
-    --primary-lightest: #D5D7F2;
-    --primary-black: #121670;
-    --primary-light: #8D92F2;
-    --primary-medium: #636AF2;
-    --primary-dark: #3D46F2;
+    --bg-white: #F9F9F9;
+    --bg-gray: #E5E5E5;
+    --primary-lightest: #F0F0F0;
+    --primary-black: #1F1F1F;
+    --primary-light: #D72638;
+    --primary-medium: #A21C29;
+    --primary-dark: #721721;
 
     /* Fuente */
-    --font-primary: 'Plus Jakarta Sans', sans-serif;
+    --font-primary: 'Roboto', sans-serif;
 }

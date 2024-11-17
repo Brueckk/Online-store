@@ -8,13 +8,26 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body class="dashboard-body">
-    <div class="dashboard-container">
-        <h1 class="dashboard-title">Bienvenido al Dashboard de la Tienda en Línea</h1>
-        <p class="dashboard-subtitle">Seleccione una opción para continuar:</p>
+    <header class="navbar">
+        <div class="navbar-logo">AutoMax</div>
+        <nav class="navbar-links">
+            <a href="/register">Registrarse</a>
+            <a href="/login">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <h1 class="dashboard-title">Bienvenido a AutoMax</h1>
+        <p class="dashboard-subtitle">Encuentra el auto de tus sueños</p>
         <div class="button-container">
             <button class="button-primary" onclick="window.location.href='/register'">Registrarse</button>
             <button class="button-secondary" onclick="window.location.href='/login'">Iniciar Sesión</button>
         </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+        © 2024 AutoMax. Todos los derechos reservados.
+    </footer>
 </body>
+
 </html>

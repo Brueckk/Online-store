@@ -58,5 +58,10 @@
     "username": "max",
     "password": "$2b$10$8gz3tz1v4sTR50wtJzY0/eaiyt7qDcJ4czntBaXA5eTI53WzzH03G",
     "role": "client"
+  },
+  {
+    "username": "mm",
+    "password": "$2b$10$7VIb0lOdvleBxkUCu2vQIegMnO/jWaYR6pHv2VJUrmaRKkbKjTeDi",
+    "role": "client"
   }
 ]
