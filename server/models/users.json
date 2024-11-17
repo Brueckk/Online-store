@@ -18,5 +18,25 @@
     "username": "thomas",
     "password": "$2b$10$NKJUI0Kp1GZu06eft66Lb.q1F712E8ahS5W.99GIdniRI1TxBX5AS",
     "role": "client"
+  },
+  {
+    "username": "Pablo ",
+    "password": "$2b$10$BojAEPYmaLsl4Wb6tSKAI.IYhrnKVP05rm1KjhS6J.n6kH8EShgI6",
+    "role": "client"
+  },
+  {
+    "username": "ThomasBrueck",
+    "password": "$2b$10$d9/a4cmSxYUoEZYesA4PLe4.cBf4wxsEViEqairEXb4noa79EV966",
+    "role": "client"
+  },
+  {
+    "username": "prueba54",
+    "password": "$2b$10$Em9izTnlt9XimL6y/hZFeu6gxqJ/2yhuv4qpxBCuGoIrjCfY4bmpG",
+    "role": "client"
+  },
+  {
+    "username": "prueba134",
+    "password": "$2b$10$x3ay8VKZRhgobnSKqDn5k.c2s9D6IUay79mEL2V/bLR6rQOHFtEA6",
+    "role": "client"
   }
 ]

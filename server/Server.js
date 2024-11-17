@@ -28,11 +28,16 @@ app.use('/static', express.static(path.join(__dirname, '../client')));
 const authRoutes = require('./routes/Auth');
 const productRoutes = require('./routes/Products');
 //const orderRoutes = require('./routes/Orders.js');
+const cartRoutes = require('./routes/Cart');
+
+
+
 
 // Configurar rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 //app.use('/api/orders', orderRoutes);
+app.use('/api/cart', cartRoutes);
 
 app.get('/', (req, res) => {
   res.send('Bienvenido a la Tienda en Línea');

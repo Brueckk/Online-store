@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1731810543120,
+    "name": "Carro",
+    "description": "El carro vuela",
+    "price": 100,
+    "quantity": 2
+  },
+  {
+    "id": 1731810901659,
+    "name": "Carro 4",
+    "description": "El carro no vuela",
+    "price": 66000000,
+    "quantity": 2
+  },
+  {
+    "id": 1731810986387,
+    "name": "Carro 1243",
+    "description": "el carro no vuelaaaaa",
+    "price": 56000000,
+    "quantity": 6
+  },
+  {
+    "id": 1731811375684,
+    "name": "Carro 8",
+    "description": "Si vuela pero no vuela",
+    "price": 66000000,
+    "quantity": 5
+  }
+]

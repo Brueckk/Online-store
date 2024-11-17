@@ -1,0 +1,15 @@
+[
+  {
+    "username": "prueba",
+    "products": [
+      {
+        "productId": "1731810901659",
+        "quantity": 1
+      },
+      {
+        "productId": "1731811375684",
+        "quantity": 1
+      }
+    ]
+  }
+]
