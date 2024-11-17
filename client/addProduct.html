@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="add-product-body">
+    <div class="add-product-container">
+        <h1 class="add-product-title">Agregar Nuevo Producto</h1>
+        <form id="addProductForm" class="add-product-form">
+            <input type="text" name="name" placeholder="Nombre del producto" required>
+            <textarea name="description" placeholder="Descripción" required></textarea>
+            <input 
+                type="text" 
+                name="price" 
+                id="price" 
+                placeholder="Precio" 
+                required>
+            <input 
+                type="number" 
+                name="quantity" 
+                placeholder="Cantidad disponible" 
+                step="1" 
+                min="0" 
+                required>
+            <!-- Contenedor para los botones -->
+            <div class="button-container">
+                <button type="submit" class="button-primary">Agregar</button>
+                <button type="button" class="button-secondary" id="backButton">Atrás</button>
+            </div>
+        </form>        
+        <p id="responseMessage" class="response-message"></p>
+    </div>
+    <script src="/static/js/addProduct.js"></script>
+    <script>
+        // Lógica para el botón "Atrás"
+        document.getElementById('backButton').addEventListener('click', () => {
+            window.location.href = '/'; // Redirige a la pantalla principal donde están los productos
+        });
+    </script>
+</body>
+</html>

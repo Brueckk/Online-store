@@ -143,3 +143,129 @@ body, html {
 }
 
 
+/* Lista de productos */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background-color: var(--bg-white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: var(--primary-light);
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-medium);
+    margin-bottom: 0.5rem;
+}
+
+.product-quantity {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+}
+
+
+.add-product-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.add-product-form-container h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-black);
+}
+
+#addProductForm input,
+#addProductForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--primary-lightest);
+    border-radius: 5px;
+    background-color: var(--bg-gray);
+    color: var(--primary-black);
+    outline: none;
+    font-size: 1rem;
+}
+
+#addProductForm button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: var(--primary-medium);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addProductForm button:hover {
+    background-color: var(--primary-dark);
+}
+
+#addProductMessage {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.button-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #D5D7F2;
+    color: #121670;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-secondary:hover {
+    background-color: #8D92F2;
+}
+
+.cart-icon-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.cart-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cart-button:hover {
+    transform: scale(1.1);
+}

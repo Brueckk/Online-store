@@ -1,4 +1,3 @@
-// client/js/register.js
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
     e.preventDefault(); // Evita el comportamiento predeterminado de recargar la página
     
@@ -19,11 +18,14 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
         
         // Verifica si la respuesta fue exitosa
         if (response.ok) {
+            // Almacenar información del usuario o token si es necesario
+            console.log("Registro exitoso:", data);
+            
             document.getElementById("responseMessage").textContent = data.message;
             document.getElementById("responseMessage").style.color = "green";
             
-            // Redirige al usuario al login si el registro fue exitoso
-            setTimeout(() => window.location.href = "/login", 2000);
+            // Redirige al usuario al dashboard (index.html)
+            setTimeout(() => window.location.href = "/static/index.html", 2000);
         } else {
             // Muestra el mensaje de error si hubo un problema en el registro
             document.getElementById("responseMessage").textContent = data.message;

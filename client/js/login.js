@@ -1,4 +1,3 @@
-// client/js/login.js
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     
@@ -20,8 +19,12 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             document.getElementById("responseMessage").textContent = "Inicio de sesión exitoso";
             document.getElementById("responseMessage").style.color = "green";
             
-            // Guardar el token en localStorage y redirigir a la página principal
+            // Guardar el token, username y role en localStorage
             localStorage.setItem("token", data.token);
+            localStorage.setItem("username", username); // Guarda el nombre de usuario
+            localStorage.setItem("role", data.role); // Supone que el backend envía el rol en el login
+            
+            // Redirigir a la página principal
             setTimeout(() => window.location.href = "/static/index.html", 2000);
         } else {
             document.getElementById("responseMessage").textContent = data.message;

@@ -38,5 +38,10 @@
     "username": "prueba134",
     "password": "$2b$10$x3ay8VKZRhgobnSKqDn5k.c2s9D6IUay79mEL2V/bLR6rQOHFtEA6",
     "role": "client"
+  },
+  {
+    "username": "qwerr",
+    "password": "$2b$10$BlI8GaK.fzb3qRyRABCYeeV1D.wyBGIWIXmj0qtihOq1hc3AObIAu",
+    "role": "client"
   }
 ]

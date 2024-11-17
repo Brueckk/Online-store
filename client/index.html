@@ -1,29 +1,42 @@
-<!-- client/index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Online Store</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
-    <h1>Bienvenido a la Tienda</h1>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <div class="cart-icon-container">
+            <button id="cartButton" class="cart-button">
+                🛒
+            </button>
+        </div>
+        <h1 class="dashboard-title">Bienvenido al Dashboard de la Tienda en Línea</h1>
 
-    <!-- Sección solo para clientes (oculta por defecto) -->
-    <div id="clientSection" style="display: none;">
-        <h2>Zona de Clientes</h2>
-        <p>Bienvenido, aquí están tus opciones como cliente.</p>
-        <!-- Agrega aquí funciones específicas del cliente -->
-    </div>
+        <!-- Sección específica para clientes -->
+        <div id="clientSection" style="display: none;">
+            <h2>Zona de Clientes</h2>
+            <p>Bienvenido, aquí están tus opciones como cliente.</p>
+        </div>
 
-    <!-- Sección solo para administrador (oculta por defecto) -->
-    <div id="adminSection" style="display: none;">
-        <h2>Zona de Administración</h2>
-        <p>Bienvenido, aquí están tus opciones como administrador.</p>
-        <!-- Agrega aquí funciones específicas del administrador -->
+        <!-- Sección específica para administradores -->
+        <div id="adminSection" style="display: none;">
+            <h2>Zona de Administración</h2>
+            <p>Bienvenido, aquí están tus opciones como administrador.</p>
+
+            <button id="addProductButton" class="button-primary">Agregar Producto</button>
+        </div>
+
+        <!-- Sección de productos (visible para todos los roles) -->
+        <h2 class="products-title">Productos Disponibles</h2>
+        <div id="product-list" class="product-list">
+            <!-- Aquí se cargarán los productos dinámicamente -->
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script type="module" src="/static/js/role.js"></script>
+    <script src="/static/js/index.js"></script>
 </body>
 </html>
