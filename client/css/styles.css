@@ -10,6 +10,14 @@
     background-color: var(--bg-gray);
 }
 
+.cart-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-gray);
+}
+
 .dashboard-container {
     text-align: center;
     background-color: var(--bg-gray);
