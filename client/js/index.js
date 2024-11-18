@@ -49,22 +49,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (response.ok) {
             const products = data.products;
     
-            // Mostrar mensaje si no hay productos
             if (products.length === 0) {
                 productList.innerHTML = '<p>No hay productos disponibles.</p>';
             } else {
+                const emojis = ["🚗", "🚙", "🚕", "🚓", "🚑", "🚒", "🚌", "🚚", "🚜", "🏎️", "🚛", "🚐", "🚎"];
                 // Generar el HTML para cada producto
                 products.forEach((product) => {
                     const productCard = document.createElement('div');
                     productCard.classList.add('product-card');
                     productCard.dataset.id = product.id; // Asegúrate de que el ID del producto esté disponible
     
+                    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
                     // Botón "Agregar al Carrito" solo para clientes
                     const addToCartButton = userRole === 'client' 
                         ? `<button class="add-to-cart-button">Agregar al Carrito</button>` 
                         : '';
     
                     productCard.innerHTML = `
+                        <div class="product-image">
+                            ${randomEmoji}
+                        </div>
                         <h3 class="product-name">${product.name}</h3>
                         <p class="product-description">${product.description}</p>
                         <p class="product-price">Precio: $${product.price.toFixed(2)}</p>
