@@ -18,6 +18,14 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.index-container {
+    text-align: center;
+    background-color: var(--bg-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .dashboard-title {
     font-size: 2rem;
     color: var(--primary-black);
@@ -276,14 +284,7 @@
 }
 
 
-.navbar {
-    background-color: var(--primary-black);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--bg-white);
-}
+
 
 .navbar-logo {
     font-size: 1.5rem;
@@ -307,14 +308,7 @@
     color: var(--primary-light);
 }
 
-.footer {
-    background-color: var(--primary-black);
-    color: var(--bg-white);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    flex-shrink: 0; /* No permitir que el footer se reduzca */
-}
+
 
 .dashboard-body {
     margin: 0;
@@ -351,7 +345,7 @@ body, html {
     top: 0;
     left: 0;
     width: 100%; /* Asegura que ocupe toda la anchura */
-    z-index: 1000; /* Asegura que esté por encima del resto del contenido */
+    z-index: 100; /* Asegura que esté por encima del resto del contenido */
 }
 
 .footer {
@@ -366,3 +360,60 @@ body, html {
     width: 100%; /* Asegura que ocupe toda la anchura */
 }
 
+
+
+/* Estilo global */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--primary-black);
+    color: var(--primary-black);
+    height: 100vh;
+}
+
+/* Estilos específicos para index.html */
+.index-body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Asegura que ocupe toda la ventana */
+    background-color: var(--primary-black);
+    overflow-y: auto; /* Permite scroll si es necesario */
+    padding-bottom: 70px; /* Espacio para evitar que el footer cubra el contenido */
+}
+
+.index-body .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-black);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.index-body .dashboard-container {
+    flex: 1;
+    margin-top: 70px; /* Espacio para el header */
+    padding: 1rem;
+    text-align: center;
+}
+
+.index-body .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Altura del footer */
+}
