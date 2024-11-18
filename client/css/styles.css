@@ -15,7 +15,16 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--bg-gray);
+    background-color: var(--primary-soft-dark);
+}
+
+
+.cart-container {
+    color: var(--bg-white);
+}
+
+.cart-list {
+    color: var(--bg-white);
 }
 
 .dashboard-container {
