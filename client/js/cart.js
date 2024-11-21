@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Cargar productos del carrito
     try {
-        const username = localStorage.getItem('username'); // Identificar al usuario actual
-        if (!username) {
+        const token = localStorage.getItem('token'); // Identificar al usuario autenticado
+        if (!token) {
             cartList.innerHTML = '<p>Debes iniciar sesión para ver tu carrito.</p>';
             return;
         }
@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`, // Enviar el token en el encabezado
             },
-            body: JSON.stringify({ username }),
         });
 
         const data = await response.json();
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Regresar a la página principal
     backButton.addEventListener('click', () => {
-        window.location.href = '/';
+        window.location.href = '/static/index.html'; // Asegura la redirección correcta
     });
 });
+

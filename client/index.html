@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Online Store</title>
+    <title>Productos - Automax</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body class="dashboard-body">
-    <div class="dashboard-container">
+
+<body class="index-body">
+    <header class="navbar">
+        <div class="navbar-logo">🚗 AutoMax 🚗</div>
+    </header>
+    <div class="index-container">
         <div class="cart-icon-container">
             <button id="cartButton" class="cart-button">
                 🛒
             </button>
         </div>
-        <h1 class="dashboard-title">Bienvenido al Dashboard de la Tienda en Línea</h1>
+        <h1 class="index2-title">.</h1>
+        <h1 class="index-title">!Lista de carros para ti! AUTOMAX</h1>
 
         <!-- Sección específica para clientes -->
-        <div id="clientSection" style="display: none;">
+        <div id="clientSection" class="client-section" style="display: none;">
             <h2>Zona de Clientes</h2>
             <p>Bienvenido, aquí están tus opciones como cliente.</p>
         </div>
 
         <!-- Sección específica para administradores -->
-        <div id="adminSection" style="display: none;">
+        <div id="adminSection" class="admin-section" style="display: none;">
             <h2>Zona de Administración</h2>
             <p>Bienvenido, aquí están tus opciones como administrador.</p>
 
-            <button id="addProductButton" class="button-primary">Agregar Producto</button>
+            <button id="addProductButton" class="button-primary-2">Agregar Producto</button>
         </div>
 
+
         <!-- Sección de productos (visible para todos los roles) -->
-        <h2 class="products-title">Productos Disponibles</h2>
+        <h2 class="products-index-title">Productos Disponibles</h2>
         <div id="product-list" class="product-list">
             <!-- Aquí se cargarán los productos dinámicamente -->
         </div>
@@ -38,5 +45,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script type="module" src="/static/js/role.js"></script>
     <script src="/static/js/index.js"></script>
+
 </body>
+
 </html>

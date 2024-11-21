@@ -49,22 +49,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (response.ok) {
             const products = data.products;
     
-            // Mostrar mensaje si no hay productos
             if (products.length === 0) {
                 productList.innerHTML = '<p>No hay productos disponibles.</p>';
             } else {
+                const emojis = ["🚗", "🚙", "🚕", "🚓", "🚑", "🚒", "🚌", "🚚", "🚜", "🏎️", "🚛", "🚐", "🚎"];
                 // Generar el HTML para cada producto
                 products.forEach((product) => {
                     const productCard = document.createElement('div');
                     productCard.classList.add('product-card');
                     productCard.dataset.id = product.id; // Asegúrate de que el ID del producto esté disponible
     
+                    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
                     // Botón "Agregar al Carrito" solo para clientes
                     const addToCartButton = userRole === 'client' 
                         ? `<button class="add-to-cart-button">Agregar al Carrito</button>` 
                         : '';
     
                     productCard.innerHTML = `
+                        <div class="product-image">
+                            ${randomEmoji}
+                        </div>
                         <h3 class="product-name">${product.name}</h3>
                         <p class="product-description">${product.description}</p>
                         <p class="product-price">Precio: $${product.price.toFixed(2)}</p>
@@ -79,23 +84,31 @@ document.addEventListener('DOMContentLoaded', async () => {
             productList.innerHTML = `<p>Error al cargar productos: ${data.message}</p>`;
         }
 
-        // Evento para manejar clic en "Agregar al Carrito"
         productList.addEventListener('click', async (e) => {
             if (e.target.classList.contains('add-to-cart-button')) {
                 const productCard = e.target.closest('.product-card');
                 const productId = productCard.dataset.id;
                 const username = localStorage.getItem('username'); // Suponiendo que el usuario está autenticado
-
+        
                 if (!username) {
                     alert('Debes iniciar sesión como cliente para agregar productos al carrito.');
                     return;
                 }
-
+        
+                // Obtener el token del almacenamiento local
+                const token = localStorage.getItem('token');
+        
+                if (!token) {
+                    alert('Falta el token de autorización. Por favor, inicia sesión nuevamente.');
+                    return;
+                }
+        
                 try {
                     const response = await fetch('/api/cart/add', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`, // Agregar el token en el encabezado
                         },
                         body: JSON.stringify({
                             username,
@@ -103,9 +116,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                             quantity: 1, // Por defecto, se agrega una unidad
                         }),
                     });
-
+        
                     const result = await response.json();
-
+        
                     if (response.ok) {
                         alert('Producto agregado al carrito correctamente.');
                     } else {
@@ -117,6 +130,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             }
         });
+        
+        
 
         // Lógica del botón para agregar productos (solo para administradores)
         addProductButton.addEventListener('click', () => {
