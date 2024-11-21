@@ -63,5 +63,10 @@
     "username": "mm",
     "password": "$2b$10$7VIb0lOdvleBxkUCu2vQIegMnO/jWaYR6pHv2VJUrmaRKkbKjTeDi",
     "role": "client"
+  },
+  {
+    "username": "test",
+    "password": "$2b$10$wH7CQaAFY2O4jQWNssfc4ujNt.YS87WfiruCt4Al4fLISGny/WTDe",
+    "role": "client"
   }
 ]

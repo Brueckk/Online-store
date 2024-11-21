@@ -4,10 +4,14 @@
     "products": [
       {
         "productId": "1731810901659",
-        "quantity": 2
+        "quantity": 3
       },
       {
         "productId": "1731811375684",
+        "quantity": 1
+      },
+      {
+        "productId": "1731887605027",
         "quantity": 1
       }
     ]
@@ -21,6 +25,24 @@
       },
       {
         "productId": "1731810901659",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "username": "test",
+    "products": [
+      {
+        "productId": "1732222688914",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "username": "mango",
+    "products": [
+      {
+        "productId": "1731810986387",
         "quantity": 1
       }
     ]

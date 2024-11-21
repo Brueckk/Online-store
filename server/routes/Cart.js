@@ -17,11 +17,11 @@ function checkUserRole(req, res, next) {
 
     try {
         const decoded = jwt.verify(token, SECRET_KEY);
-        if (decoded.role === 'admin') {
+        if (decoded.role !== 'client') { // Permite solo a clientes continuar
             return res.status(403).json({ message: 'El rol de administrador no tiene acceso al carrito' });
         }
-        req.user = decoded; // Guarda la información del usuario autenticado
-        next(); // Permite que los clientes accedan a las rutas
+        req.user = decoded; // Guarda el usuario autenticado para el siguiente middleware
+        next();
     } catch (error) {
         res.status(403).json({ message: 'Token inválido' });
     }
@@ -78,6 +78,7 @@ router.post('/add', checkUserRole, (req, res) => {
     writeFile(cartsFilePath, carts);
     res.status(201).json({ message: 'Producto agregado al carrito correctamente' });
 });
+
 
 
 // Ruta para listar los productos del carrito
