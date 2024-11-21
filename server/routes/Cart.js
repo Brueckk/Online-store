@@ -8,7 +8,6 @@ const SECRET_KEY = 'your_secure_jwt_secret_key';
 const cartsFilePath = path.join(__dirname, '../models/carts.json');
 const productsFilePath = path.join(__dirname, '../models/products.json');
 
-// Middleware para verificar el rol
 function checkUserRole(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
 
@@ -21,12 +20,13 @@ function checkUserRole(req, res, next) {
         if (decoded.role === 'admin') {
             return res.status(403).json({ message: 'El rol de administrador no tiene acceso al carrito' });
         }
-        req.user = decoded; // Guarda la información del usuario para el siguiente middleware
-        next();
+        req.user = decoded; // Guarda la información del usuario autenticado
+        next(); // Permite que los clientes accedan a las rutas
     } catch (error) {
         res.status(403).json({ message: 'Token inválido' });
     }
 }
+
 
 // Función para manejar la lectura de archivos JSON
 function readFile(filePath) {
@@ -51,7 +51,6 @@ function writeFile(filePath, data) {
     }
 }
 
-// Ruta para agregar un producto al carrito
 router.post('/add', checkUserRole, (req, res) => {
     const { productId, quantity } = req.body;
     const username = req.user.username; // Usuario autenticado
@@ -80,6 +79,7 @@ router.post('/add', checkUserRole, (req, res) => {
     res.status(201).json({ message: 'Producto agregado al carrito correctamente' });
 });
 
+
 // Ruta para listar los productos del carrito
 router.post('/list', checkUserRole, (req, res) => {
     const username = req.user.username; // Usuario autenticado
@@ -104,5 +104,6 @@ router.post('/list', checkUserRole, (req, res) => {
 
     res.status(200).json({ products: enrichedProducts });
 });
+
 
 module.exports = router;
