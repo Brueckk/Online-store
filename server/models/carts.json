@@ -1,20 +1,7 @@
 [
   {
     "username": "prueba",
-    "products": [
-      {
-        "productId": "1731810901659",
-        "quantity": 3
-      },
-      {
-        "productId": "1731811375684",
-        "quantity": 1
-      },
-      {
-        "productId": "1731887605027",
-        "quantity": 1
-      }
-    ]
+    "products": []
   },
   {
     "username": "JuanP",
@@ -46,5 +33,9 @@
         "quantity": 1
       }
     ]
+  },
+  {
+    "username": "Juanes",
+    "products": []
   }
 ]
