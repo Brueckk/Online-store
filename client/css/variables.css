@@ -1,14 +1,14 @@
 :root {
-    /* Colores */
+
     --bg-white: #F9F9F9;
     --bg-gray: #E5E5E5;
-    --primary-lightest: #F0F0F0;
+    --primary-lightest: #E0DFF9;
     --primary-black: #1F1F1F;
-    --primary-light: #D72638;
-    --primary-medium: #A21C29;
-    --primary-dark: #721721;
-    --primary-soft-dark: #414040;
-    --primary-yellow: #989e33;
+    --primary-light: #A27BFF;
+    --primary-medium: #8057FF;
+    --primary-dark: #5A32B1;
+    --primary-soft-dark: #302848;
+    --primary-yellow: #8d33ff;
 
     /* Fuente */
     --font-primary: 'Roboto', sans-serif;

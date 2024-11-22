@@ -8,6 +8,7 @@ const SECRET_KEY = 'your_secure_jwt_secret_key';
 const cartsFilePath = path.join(__dirname, '../models/carts.json');
 const productsFilePath = path.join(__dirname, '../models/products.json');
 
+// Función para validar el rol del usuario
 function checkUserRole(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
 
@@ -26,7 +27,6 @@ function checkUserRole(req, res, next) {
         res.status(403).json({ message: 'Token inválido' });
     }
 }
-
 
 // Función para manejar la lectura de archivos JSON
 function readFile(filePath) {
@@ -51,6 +51,7 @@ function writeFile(filePath, data) {
     }
 }
 
+// Ruta para agregar un producto al carrito
 router.post('/add', checkUserRole, (req, res) => {
     const { productId, quantity } = req.body;
     const username = req.user.username; // Usuario autenticado
@@ -60,6 +61,14 @@ router.post('/add', checkUserRole, (req, res) => {
     }
 
     const carts = readFile(cartsFilePath);
+    const products = readFile(productsFilePath);
+
+    // Validar que el producto exista en el inventario
+    const productExists = products.find(product => product.id === parseInt(productId, 10));
+    if (!productExists) {
+        return res.status(400).json({ message: 'El producto no existe en el inventario.' });
+    }
+
     let userCart = carts.find(cart => cart.username === username);
 
     if (!userCart) {
@@ -79,8 +88,6 @@ router.post('/add', checkUserRole, (req, res) => {
     res.status(201).json({ message: 'Producto agregado al carrito correctamente' });
 });
 
-
-
 // Ruta para listar los productos del carrito
 router.post('/list', checkUserRole, (req, res) => {
     const username = req.user.username; // Usuario autenticado
@@ -94,9 +101,9 @@ router.post('/list', checkUserRole, (req, res) => {
     }
 
     const enrichedProducts = userCart.products.map(cartItem => {
-        const productDetails = products.find(product => product.id === parseInt(cartItem.productId, 10));
+        const productDetails = products.find(product => product.id == cartItem.productId); // Comparación ajustada
         return {
-            name: productDetails?.name || 'Producto no encontrado',
+            name: productDetails?.name || `Producto ID: ${cartItem.productId} no encontrado`,
             price: productDetails?.price || 0,
             quantity: cartItem.quantity,
             total: productDetails ? (productDetails.price * cartItem.quantity).toFixed(2) : '0.00',
@@ -105,6 +112,5 @@ router.post('/list', checkUserRole, (req, res) => {
 
     res.status(200).json({ products: enrichedProducts });
 });
-
 
 module.exports = router;

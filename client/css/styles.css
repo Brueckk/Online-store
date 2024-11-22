@@ -492,3 +492,45 @@ body, html {
     margin-bottom: 1rem; /* Espacio entre la "imagen" y el resto de la información */
     color: var(--primary-medium); /* Cambia el color si es necesario */
 }
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #000;
+    color: #fff;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #fff;
+    padding: 8px;
+}
+
+.invoice-table th {
+    background-color: #333;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.invoice-table tr:nth-child(even) {
+    background-color: #111;
+}
+
+.invoice-table tr:hover {
+    background-color: #222;
+}
+
+.invoice-table td {
+    text-align: center;
+    color: #fff;
+}
+
+.invoice-table caption {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
