@@ -7,29 +7,29 @@ const cartsFilePath = path.join(__dirname, '../models/carts.json');
 const productsFilePath = path.join(__dirname, '../models/products.json');
 const invoicesFilePath = path.join(__dirname, '../models/invoices.json');
 
-// Función para manejar la lectura de archivos JSON
+// Function to read JSON files
 function readFile(filePath) {
     try {
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, JSON.stringify([])); // Crear archivo vacío si no existe
+            fs.writeFileSync(filePath, JSON.stringify([]));
         }
-        return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const data = fs.readFileSync(filePath, 'utf-8');
+        return JSON.parse(data);
     } catch (error) {
-        console.error(`Error al leer el archivo ${filePath}:`, error);
+        console.error(`Error reading file ${filePath}:`, error);
         return [];
     }
 }
 
-// Función para manejar la escritura en archivos JSON
+// Function to write JSON files
 function writeFile(filePath, data) {
     try {
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     } catch (error) {
-        console.error(`Error al escribir en el archivo ${filePath}:`, error);
+        console.error(`Error writing to file ${filePath}:`, error);
     }
 }
 
-// Ruta para generar una factura
 router.post('/createInvoice', (req, res) => {
     const { username } = req.body;
 
@@ -47,20 +47,34 @@ router.post('/createInvoice', (req, res) => {
         return res.status(400).json({ message: 'El carrito está vacío o no existe.' });
     }
 
-    const invoiceItems = userCart.products
-        .map(cartItem => {
-            const productDetails = products.find(p => p.id == cartItem.productId);
-            if (!productDetails) return null; // Ignorar productos inexistentes
-            return {
-                name: productDetails.name,
-                price: productDetails.price,
-                quantity: cartItem.quantity,
-                total: productDetails.price * cartItem.quantity,
-            };
-        })
-        .filter(item => item !== null);
+    const invoiceItems = [];
+    let total = 0;
 
-    const total = invoiceItems.reduce((sum, item) => sum + item.total, 0);
+    for (const cartItem of userCart.products) {
+        const productIndex = products.findIndex(p => p.id == cartItem.productId);
+        if (productIndex === -1) continue; // Skip if product not found
+
+        const product = products[productIndex];
+        if (product.quantity < cartItem.quantity) {
+            return res.status(400).json({ message: `No hay suficiente stock de ${product.name}` });
+        }
+
+        // Update product quantity
+        product.quantity -= cartItem.quantity; // Cambiado de product.quantity -= cartItem.quantity
+        invoiceItems.push({
+            name: product.name,
+            price: product.price,
+            quantity: cartItem.quantity,
+            total: product.price * cartItem.quantity,
+        });
+
+        total += product.price * cartItem.quantity;
+
+        // Remove product if out of stock
+        if (product.quantity === 0) {
+            products.splice(productIndex, 1);
+        }
+    }
 
     const newInvoice = {
         id: invoices.length + 1,
@@ -72,15 +86,17 @@ router.post('/createInvoice', (req, res) => {
 
     invoices.push(newInvoice);
     writeFile(invoicesFilePath, invoices);
+    writeFile(productsFilePath, products); // Update products file
 
-    // Vaciar el carrito del usuario
+    // Clear user's cart
     const userCartIndex = carts.findIndex(cart => cart.username === username);
     if (userCartIndex !== -1) {
-        carts[userCartIndex].products = []; // Vaciar el carrito
-        writeFile(cartsFilePath, carts); // Guardar cambios en carts.json
+        carts[userCartIndex].products = [];
+        writeFile(cartsFilePath, carts);
     }
 
     res.status(201).json({ message: 'Factura creada exitosamente.', invoice: newInvoice });
 });
 
 module.exports = router;
+
