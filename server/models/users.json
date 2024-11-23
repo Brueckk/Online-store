@@ -73,5 +73,15 @@
     "username": "Juanes",
     "password": "$2b$10$TwuHsLyjjfF0zko49Gqw2uLDtsXwAKQLW/hm4Isfh7YbugG2ApDiO",
     "role": "client"
+  },
+  {
+    "username": "Test",
+    "password": "$2b$10$NAy4oFFckH/4RWv9ueMZdu4UTuGsf85KCwfekwo2DmzfbUXTCeGTa",
+    "role": "client"
+  },
+  {
+    "username": "nose",
+    "password": "$2b$10$ehXvLh1suX5trnAWlcoJtOONBiCbymhf39.uoFLbn5ifhUcjmrSb.",
+    "role": "client"
   }
 ]

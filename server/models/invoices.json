@@ -304,5 +304,261 @@
     ],
     "total": 66000111,
     "createdAt": "2024-11-22T03:12:14.729Z"
+  },
+  {
+    "id": 16,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro",
+        "price": 100,
+        "quantity": 1,
+        "total": 100
+      }
+    ],
+    "total": 100,
+    "createdAt": "2024-11-22T19:58:59.031Z"
+  },
+  {
+    "id": 17,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 4",
+        "price": 66000000,
+        "quantity": 1,
+        "total": 66000000
+      }
+    ],
+    "total": 66000000,
+    "createdAt": "2024-11-22T19:59:16.061Z"
+  },
+  {
+    "id": 18,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 1243",
+        "price": 56000000,
+        "quantity": 1,
+        "total": 56000000
+      }
+    ],
+    "total": 56000000,
+    "createdAt": "2024-11-22T19:59:24.983Z"
+  },
+  {
+    "id": 19,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 4",
+        "price": 66000000,
+        "quantity": 2,
+        "total": 132000000
+      },
+      {
+        "name": "Carro 1243",
+        "price": 56000000,
+        "quantity": 1,
+        "total": 56000000
+      }
+    ],
+    "total": 188000000,
+    "createdAt": "2024-11-22T20:18:28.987Z"
+  },
+  {
+    "id": 20,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro",
+        "price": 100,
+        "quantity": 1,
+        "total": 100
+      }
+    ],
+    "total": 100,
+    "createdAt": "2024-11-22T20:18:36.796Z"
+  },
+  {
+    "id": 21,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 1243",
+        "price": 56000000,
+        "quantity": 1,
+        "total": 56000000
+      }
+    ],
+    "total": 56000000,
+    "createdAt": "2024-11-22T20:18:47.080Z"
+  },
+  {
+    "id": 22,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 8",
+        "price": 66000000,
+        "quantity": 1,
+        "total": 66000000
+      }
+    ],
+    "total": 66000000,
+    "createdAt": "2024-11-22T20:18:59.890Z"
+  },
+  {
+    "id": 23,
+    "username": "nose",
+    "items": [
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 78,
+    "createdAt": "2024-11-22T20:19:16.997Z"
+  },
+  {
+    "id": 24,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 8",
+        "price": 66000000,
+        "quantity": 1,
+        "total": 66000000
+      }
+    ],
+    "total": 66000000,
+    "createdAt": "2024-11-22T20:19:26.351Z"
+  },
+  {
+    "id": 25,
+    "username": "nose",
+    "items": [
+      {
+        "name": "carro321",
+        "price": 111,
+        "quantity": 1,
+        "total": 111
+      }
+    ],
+    "total": 111,
+    "createdAt": "2024-11-22T20:20:44.489Z"
+  },
+  {
+    "id": 26,
+    "username": "nose",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-22T20:20:52.681Z"
+  },
+  {
+    "id": 27,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 1243",
+        "price": 56000000,
+        "quantity": 1,
+        "total": 56000000
+      }
+    ],
+    "total": 56000000,
+    "createdAt": "2024-11-22T20:33:57.503Z"
+  },
+  {
+    "id": 28,
+    "username": "nose",
+    "items": [
+      {
+        "name": "Carro 8",
+        "price": 66000000,
+        "quantity": 1,
+        "total": 66000000
+      }
+    ],
+    "total": 66000000,
+    "createdAt": "2024-11-22T20:34:09.184Z"
+  },
+  {
+    "id": 29,
+    "username": "nose",
+    "items": [
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 78,
+    "createdAt": "2024-11-22T20:34:17.109Z"
+  },
+  {
+    "id": 30,
+    "username": "nose",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 2,
+        "total": 2
+      },
+      {
+        "name": "Carro 1243",
+        "price": 56000000,
+        "quantity": 1,
+        "total": 56000000
+      }
+    ],
+    "total": 56000002,
+    "createdAt": "2024-11-22T20:34:30.754Z"
+  },
+  {
+    "id": 31,
+    "username": "nose",
+    "items": [
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 78,
+    "createdAt": "2024-11-22T20:39:49.901Z"
+  },
+  {
+    "id": 32,
+    "username": "nose",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      },
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 79,
+    "createdAt": "2024-11-22T20:40:03.267Z"
   }
 ]

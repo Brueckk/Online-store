@@ -1,3 +1,4 @@
+// server/routes/Cart.js
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -18,10 +19,10 @@ function checkUserRole(req, res, next) {
 
     try {
         const decoded = jwt.verify(token, SECRET_KEY);
-        if (decoded.role !== 'client') { // Permite solo a clientes continuar
+        if (decoded.role !== 'client') {
             return res.status(403).json({ message: 'El rol de administrador no tiene acceso al carrito' });
         }
-        req.user = decoded; // Guarda el usuario autenticado para el siguiente middleware
+        req.user = decoded;
         next();
     } catch (error) {
         res.status(403).json({ message: 'Token inválido' });
@@ -32,7 +33,7 @@ function checkUserRole(req, res, next) {
 function readFile(filePath) {
     try {
         if (!fs.existsSync(filePath)) {
-            fs.writeFileSync(filePath, JSON.stringify([])); // Crear archivo vacío si no existe
+            fs.writeFileSync(filePath, JSON.stringify([]));
         }
         const data = fs.readFileSync(filePath, 'utf-8');
         return data ? JSON.parse(data) : [];
@@ -54,7 +55,7 @@ function writeFile(filePath, data) {
 // Ruta para agregar un producto al carrito
 router.post('/add', checkUserRole, (req, res) => {
     const { productId, quantity } = req.body;
-    const username = req.user.username; // Usuario autenticado
+    const username = req.user.username;
 
     if (!productId || !quantity) {
         return res.status(400).json({ message: 'Todos los campos son obligatorios' });
@@ -63,7 +64,6 @@ router.post('/add', checkUserRole, (req, res) => {
     const carts = readFile(cartsFilePath);
     const products = readFile(productsFilePath);
 
-    // Validar que el producto exista en el inventario
     const productExists = products.find(product => product.id === parseInt(productId, 10));
     if (!productExists) {
         return res.status(400).json({ message: 'El producto no existe en el inventario.' });
@@ -90,7 +90,7 @@ router.post('/add', checkUserRole, (req, res) => {
 
 // Ruta para listar los productos del carrito
 router.post('/list', checkUserRole, (req, res) => {
-    const username = req.user.username; // Usuario autenticado
+    const username = req.user.username;
     const carts = readFile(cartsFilePath);
     const products = readFile(productsFilePath);
 
@@ -101,7 +101,7 @@ router.post('/list', checkUserRole, (req, res) => {
     }
 
     const enrichedProducts = userCart.products.map(cartItem => {
-        const productDetails = products.find(product => product.id == cartItem.productId); // Comparación ajustada
+        const productDetails = products.find(product => product.id == cartItem.productId);
         return {
             name: productDetails?.name || `Producto ID: ${cartItem.productId} no encontrado`,
             price: productDetails?.price || 0,
