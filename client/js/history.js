@@ -51,6 +51,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Botón "Atrás"
     backButton.addEventListener('click', () => {
-        window.location.href = '/static/index.html'; // Redirige a la página principal
+        window.location.href = '/client/index.html'; // Redirige a la página principal
     });
 });

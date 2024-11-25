@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const clientSection = document.getElementById('clientSection');
     const adminSection = document.getElementById('adminSection');
 
+    
     if (!token) {
         alert('No has iniciado sesión.');
         window.location.href = '/login';
         return;
     }
+    
 
     try {
         const decoded = jwt_decode(token);
@@ -29,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Redirigir al carrito
     cartButton.addEventListener('click', () => {
-        window.location.href = '/static/cart.html';
+        window.location.href = '/client/cart.html';
     });
 
     try {
@@ -55,6 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const emojis = ["🚗", "🚙", "🚕", "🚓", "🚑", "🚒", "🚌", "🚚", "🚜", "🏎️", "🚛", "🚐", "🚎"];
                 // Generar el HTML para cada producto
                 products.forEach((product) => {
+                    if (product.quantity > 0 && product.price > 0) {
                     const productCard = document.createElement('div');
                     productCard.classList.add('product-card');
                     productCard.dataset.id = product.id; // Asegúrate de que el ID del producto esté disponible
@@ -78,6 +81,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     `;
     
                     productList.appendChild(productCard);
+                    }
                 });
             }
         } else {

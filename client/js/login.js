@@ -25,7 +25,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             localStorage.setItem("role", data.role); // Supone que el backend envía el rol en el login
             
             // Redirigir a la página principal
-            setTimeout(() => window.location.href = "/static/index.html", 2000);
+            setTimeout(() => window.location.href = "/client/index.html", 2000);
         } else {
             document.getElementById("responseMessage").textContent = data.message;
             document.getElementById("responseMessage").style.color = "red";

@@ -45,5 +45,26 @@
   {
     "username": "historial",
     "products": []
+  },
+  {
+    "username": "stick",
+    "products": []
+  },
+  {
+    "username": "holabuenas",
+    "products": [
+      {
+        "productId": "1732557241383",
+        "quantity": 1
+      },
+      {
+        "productId": "1731887605027",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "username": "stickcomprador",
+    "products": []
   }
 ]

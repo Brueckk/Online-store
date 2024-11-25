@@ -88,5 +88,45 @@
     "username": "historial",
     "password": "$2b$10$pqtvnZ0zqakUf9C9Qm17T.1VlCJH18FoEPmu0N3YF9xqDfqhWmLnq",
     "role": "client"
+  },
+  {
+    "username": "titoparris",
+    "password": "$2b$10$RI0epTYYko7PjnNuozPdKOOHyi28brt/qY3xYYjA2ATn.jeaDNx6O",
+    "role": "client"
+  },
+  {
+    "username": "titomarti",
+    "password": "$2b$10$mM7OU7irUQOJu4TVJgm9IOFgFV.h01i7R88rCnBvX8oLJK7SXVfaq",
+    "role": "client"
+  },
+  {
+    "username": "stick",
+    "password": "$2b$10$9brP3cNjARyJS/TZBDbZ/eKhIdsdl5ygObjVinGVpvdkXsJUZbLjS",
+    "role": "client"
+  },
+  {
+    "username": "stick2",
+    "password": "$2b$10$t.9FbPO2dn0Cn/gvI3Bol.7UzqIJ76tTEHYbWg/YS07PxGso7i6Ie",
+    "role": "client"
+  },
+  {
+    "username": "sisas",
+    "password": "$2b$10$t0ojJVqjeWkcPva1yhgt9.Qd2vJrUpSw3rHC0CTUP4je04BqVRqjS",
+    "role": "client"
+  },
+  {
+    "username": "nosas",
+    "password": "$2b$10$IXmp2iIkVVe0TnlSuXk6h.lOonR50JP4RC2zFgsAfO6jLgWKTz1uG",
+    "role": "client"
+  },
+  {
+    "username": "holabuenas",
+    "password": "$2b$10$z1BnBNTF9UgQBdPyblOO/ebntoLFodiXbfxvhaW7R5jEUmohPwjH.",
+    "role": "client"
+  },
+  {
+    "username": "stickcomprador",
+    "password": "$2b$10$A5MxxEoHL8JH84Vwdw/3kOcqqkISpiw2l65ZfbfQxBqC0ettRpwdS",
+    "role": "client"
   }
 ]
