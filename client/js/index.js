@@ -18,11 +18,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const userRole = decoded.role;
 
         if (userRole === 'admin') {
-            // Ocultar secciones de cliente y carrito
             clientSection.style.display = 'none';
             cartButton.style.display = 'none';
         } else if (userRole === 'client') {
-            // Mostrar secciones de cliente
             adminSection.style.display = 'none';
         }
     } catch (error) {
@@ -60,13 +58,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (product.quantity > 0 && product.price > 0) {
                     const productCard = document.createElement('div');
                     productCard.classList.add('product-card');
-                    productCard.dataset.id = product.id; // Asegúrate de que el ID del producto esté disponible
-    
+                    productCard.dataset.id = product.id;
                     const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
                     // Botón "Agregar al Carrito" solo para clientes
-                    const addToCartButton = userRole === 'client' 
-                        ? `<button class="add-to-cart-button">Agregar al Carrito</button>` 
+                    const addToCartButton = userRole === 'client'
+                        ? `<button class="add-to-cart-button">Agregar al Carrito</button>`
                         : '';
     
                     productCard.innerHTML = `

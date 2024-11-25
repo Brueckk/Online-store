@@ -4,41 +4,34 @@
     "name": "carroPrueba",
     "description": "so",
     "price": 1,
-    "quantity": 113
-  },
-  {
-    "id": 1732555383405,
-    "name": "Carrito Al Pacino",
-    "description": "Un carrito bien melosky",
-    "price": 20,
-    "quantity": -2
-  },
-  {
-    "id": 1732557241383,
-    "name": "Carrito Icesi",
-    "description": "Icesista de coraçao",
-    "price": 20,
-    "quantity": -5
-  },
-  {
-    "id": 1732557362486,
-    "name": "Carrito las maleducadas",
-    "description": "Solo para crianzas",
-    "price": 20,
-    "quantity": -10
-  },
-  {
-    "id": 1732557802309,
-    "name": "holas",
-    "description": "sisas",
-    "price": -2,
-    "quantity": -7
+    "quantity": 108
   },
   {
     "id": 1732570051206,
     "name": "Carrito Al Pacino",
     "description": "Idilio",
     "price": 35,
-    "quantity": 7
+    "quantity": 6
+  },
+  {
+    "id": 1732576105801,
+    "name": "Carrito Mariokart",
+    "description": "Este carro es basado en mario kart",
+    "price": 120,
+    "quantity": 6
+  },
+  {
+    "id": 1732576127668,
+    "name": "Carrito prueba1",
+    "description": "Negativos",
+    "price": -20,
+    "quantity": 10
+  },
+  {
+    "id": 1732576150976,
+    "name": "Carrito prueba2",
+    "description": "Hola tito parris",
+    "price": 20,
+    "quantity": -2
   }
 ]
