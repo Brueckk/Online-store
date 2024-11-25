@@ -1,11 +1,14 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const cartsFilePath = path.join(__dirname, '../models/carts.json');
 const productsFilePath = path.join(__dirname, '../models/products.json');
 const invoicesFilePath = path.join(__dirname, '../models/invoices.json');
+
+const SECRET_KEY = 'your_secure_jwt_secret_key'; // Cambia por tu clave secreta
 
 // Function to read JSON files
 function readFile(filePath) {
@@ -30,6 +33,7 @@ function writeFile(filePath, data) {
     }
 }
 
+// Endpoint to create an invoice
 router.post('/createInvoice', (req, res) => {
     const { username } = req.body;
 
@@ -60,7 +64,7 @@ router.post('/createInvoice', (req, res) => {
         }
 
         // Update product quantity
-        product.quantity -= cartItem.quantity; // Cambiado de product.quantity -= cartItem.quantity
+        product.quantity -= cartItem.quantity;
         invoiceItems.push({
             name: product.name,
             price: product.price,
@@ -98,5 +102,26 @@ router.post('/createInvoice', (req, res) => {
     res.status(201).json({ message: 'Factura creada exitosamente.', invoice: newInvoice });
 });
 
-module.exports = router;
+// Endpoint to get the purchase history
+router.get('/history', (req, res) => {
+    const token = req.headers.authorization?.split(' ')[1]; // Get the token from the Authorization header
+    if (!token) {
+        return res.status(403).json({ message: 'No tienes autorización para acceder a esta información' });
+    }
 
+    try {
+        const user = jwt.verify(token, SECRET_KEY); // Verify the token
+        const invoices = readFile(invoicesFilePath); // Read invoices from file
+        const userInvoices = invoices.filter(invoice => invoice.username === user.username);
+
+        res.status(200).json({
+            message: 'Historial de compras obtenido correctamente',
+            history: userInvoices,
+        });
+    } catch (error) {
+        console.error('Error decoding token:', error);
+        res.status(403).json({ message: 'Token inválido o expirado' });
+    }
+});
+
+module.exports = router;

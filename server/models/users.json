@@ -83,5 +83,10 @@
     "username": "nose",
     "password": "$2b$10$ehXvLh1suX5trnAWlcoJtOONBiCbymhf39.uoFLbn5ifhUcjmrSb.",
     "role": "client"
+  },
+  {
+    "username": "historial",
+    "password": "$2b$10$pqtvnZ0zqakUf9C9Qm17T.1VlCJH18FoEPmu0N3YF9xqDfqhWmLnq",
+    "role": "client"
   }
 ]

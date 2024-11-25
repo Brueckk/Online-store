@@ -4,13 +4,13 @@
     "name": "carroPrueba",
     "description": "so",
     "price": 1,
-    "quantity": 127
+    "quantity": 126
   },
   {
     "id": 1732222688914,
     "name": "zzz",
     "description": "sff",
     "price": 78,
-    "quantity": 2
+    "quantity": 1
   }
 ]

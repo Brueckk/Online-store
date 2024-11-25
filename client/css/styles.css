@@ -534,3 +534,51 @@ body, html {
     text-align: center;
 }
 
+.history-container {
+    padding: 2rem;
+    background-color: var(--primary-soft-dark); /* Fondo morado oscuro */
+    color: var(--bg-white); /* Texto blanco */
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.history-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history-item {
+    background-color: var(--primary-medium); /* Fondo morado medio */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--bg-white);
+}
+
+.history-item h3, .history-item p {
+    margin: 0.5rem 0;
+}
+
+.history-item ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.button-secondary {
+    margin-top: 1rem; /* Margen superior para separarlo del contenido anterior */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-light);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-dark);
+}

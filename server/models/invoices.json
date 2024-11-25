@@ -560,5 +560,33 @@
     ],
     "total": 79,
     "createdAt": "2024-11-22T20:40:03.267Z"
+  },
+  {
+    "id": 33,
+    "username": "prueba",
+    "items": [
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 78,
+    "createdAt": "2024-11-24T19:58:33.223Z"
+  },
+  {
+    "id": 34,
+    "username": "historial",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-24T21:06:45.862Z"
   }
 ]
