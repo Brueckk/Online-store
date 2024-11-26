@@ -5,23 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - AutoMax</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/client/css/styles.css">
 </head>
 <body class="dashboard-body">
     <header class="navbar">
         
+        <button id="button-initial" class="button-back" onclick="window.location.href='/'">
+            &#8592;
+        </button>
         <div class="navbar-logo">🚗 AutoMax 🚗</div>
         
     </header>
 
     <main class="dashboard-container">
-        <h1 class="dashboard-title">Bienvenido a AutoMax</h1>
-        <p class="dashboard-subtitle">Encuentra el auto de tus sueños</p>
-        <div class="button-container">
-            <button class="button-primary" onclick="window.location.href='/register'">Registrarse</button>
-            <button class="button-secondary" onclick="window.location.href='/login'">Iniciar Sesión</button>
+        <div class="left-container">
+            <h1 class="dashboard-title">Bienvenido a AutoMax</h1>
+            <p class="dashboard-subtitle">Encuentra el auto de tus sueños
+                en un solo paso
+            </p>
+            <div class="button-container">
+                <button class="button-primary" onclick="window.location.href='/register'">Registrarse</button>
+                <button class="button-secondary" onclick="window.location.href='/login'">Iniciar Sesión</button>
+            </div>
+        </div>
+        <div class="right-container">
+            <img src="/static/images/image.jpg" alt="AutoMax" class="image-right">
         </div>
     </main>
+    
 
     <footer class="footer">
         © 2024 AutoMax. Todos los derechos reservados.

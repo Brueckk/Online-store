@@ -588,5 +588,199 @@
     ],
     "total": 1,
     "createdAt": "2024-11-24T21:06:45.862Z"
+  },
+  {
+    "id": 35,
+    "username": "stick",
+    "items": [
+      {
+        "name": "zzz",
+        "price": 78,
+        "quantity": 1,
+        "total": 78
+      }
+    ],
+    "total": 78,
+    "createdAt": "2024-11-25T17:00:27.586Z"
+  },
+  {
+    "id": 36,
+    "username": "stick",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 2,
+        "total": 2
+      }
+    ],
+    "total": 2,
+    "createdAt": "2024-11-25T17:01:43.777Z"
+  },
+  {
+    "id": 37,
+    "username": "stick",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-25T17:05:47.882Z"
+  },
+  {
+    "id": 38,
+    "username": "stick",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 2,
+        "total": 2
+      }
+    ],
+    "total": 2,
+    "createdAt": "2024-11-25T17:06:26.056Z"
+  },
+  {
+    "id": 39,
+    "username": "stick",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-25T17:09:34.615Z"
+  },
+  {
+    "id": 40,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-25T17:11:16.010Z"
+  },
+  {
+    "id": 41,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 4,
+        "total": 4
+      }
+    ],
+    "total": 4,
+    "createdAt": "2024-11-25T17:14:50.125Z"
+  },
+  {
+    "id": 42,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-25T17:15:12.692Z"
+  },
+  {
+    "id": 43,
+    "username": "stickcomprador",
+    "items": [
+      {
+        "name": "Carrito Al Pacino",
+        "price": 35,
+        "quantity": 1,
+        "total": 35
+      }
+    ],
+    "total": 35,
+    "createdAt": "2024-11-25T21:29:09.773Z"
+  },
+  {
+    "id": 44,
+    "username": "stickcomprador",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      },
+      {
+        "name": "Carrito Al Pacino",
+        "price": 35,
+        "quantity": 2,
+        "total": 70
+      }
+    ],
+    "total": 71,
+    "createdAt": "2024-11-25T21:29:34.792Z"
+  },
+  {
+    "id": 45,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 4,
+        "total": 4
+      }
+    ],
+    "total": 4,
+    "createdAt": "2024-11-25T22:47:38.143Z"
+  },
+  {
+    "id": 46,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "Carrito Al Pacino",
+        "price": 35,
+        "quantity": 1,
+        "total": 35
+      },
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 36,
+    "createdAt": "2024-11-25T22:48:08.042Z"
+  },
+  {
+    "id": 47,
+    "username": "holabuenas",
+    "items": [
+      {
+        "name": "Carrito Mariokart",
+        "price": 120,
+        "quantity": 1,
+        "total": 120
+      }
+    ],
+    "total": 120,
+    "createdAt": "2024-11-25T23:09:33.439Z"
   }
 ]

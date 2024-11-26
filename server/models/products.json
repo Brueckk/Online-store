@@ -4,13 +4,34 @@
     "name": "carroPrueba",
     "description": "so",
     "price": 1,
-    "quantity": 126
+    "quantity": 108
   },
   {
-    "id": 1732222688914,
-    "name": "zzz",
-    "description": "sff",
-    "price": 78,
-    "quantity": 1
+    "id": 1732570051206,
+    "name": "Carrito Al Pacino",
+    "description": "Idilio",
+    "price": 35,
+    "quantity": 6
+  },
+  {
+    "id": 1732576105801,
+    "name": "Carrito Mariokart",
+    "description": "Este carro es basado en mario kart",
+    "price": 120,
+    "quantity": 6
+  },
+  {
+    "id": 1732576127668,
+    "name": "Carrito prueba1",
+    "description": "Negativos",
+    "price": -20,
+    "quantity": 10
+  },
+  {
+    "id": 1732576150976,
+    "name": "Carrito prueba2",
+    "description": "Hola tito parris",
+    "price": 20,
+    "quantity": -2
   }
 ]

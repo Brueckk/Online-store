@@ -21,7 +21,8 @@ app.get('/login', (req, res) => {
 });
 
 // Archivos estáticos
-app.use('/static', express.static(path.join(__dirname, '../client')));
+app.use('/client', express.static(path.join(__dirname, '../client')));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 // Importar rutas
 const authRoutes = require('./routes/Auth');

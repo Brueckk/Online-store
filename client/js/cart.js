@@ -117,6 +117,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Manejar clic en "Atrás"
     backButton.addEventListener('click', () => {
-        window.location.href = '/static/index.html'; // Redirige a la página principal
+        window.location.href = '/client/index.html'; // Redirige a la página principal
     });
 });

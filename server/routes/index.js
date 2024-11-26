@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     cartButton.addEventListener('click', () => {
-        window.location.href = '/static/cart.html';
+        window.location.href = '/client/cart.html';
     });
 
     function getConsistentEmoji(productId) {
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const addProductButton = document.getElementById('addProductButton');
     if (addProductButton) {
         addProductButton.addEventListener('click', () => {
-            window.location.href = '/static/addProduct.html';
+            window.location.href = '/client/addProduct.html';
         });
     }
 });

@@ -1,0 +1,51 @@
+@import url('variables.css');
+
+.index-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product-card {
+    background-color: var(--primary-yellow);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-info {
+    padding: 1rem;
+}
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.product-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.product-price {
+    font-weight: bold;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.cart-icon-container {
+    position: static;
+}

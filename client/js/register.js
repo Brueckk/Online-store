@@ -25,7 +25,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
             document.getElementById("responseMessage").style.color = "green";
             
             // Redirige al usuario al dashboard (index.html)
-            setTimeout(() => window.location.href = "/static/index.html", 2000);
+            setTimeout(() => window.location.href = "/client/index.html", 2000);
         } else {
             // Muestra el mensaje de error si hubo un problema en el registro
             document.getElementById("responseMessage").textContent = data.message;

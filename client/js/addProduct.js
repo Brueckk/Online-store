@@ -6,8 +6,14 @@ document.getElementById('addProductForm').addEventListener('submit', async (e) =
     let price = e.target.price.value;
     const quantity = e.target.quantity.value;
 
-    // Eliminar puntos para convertir el precio a un formato limpio
-    price = price.replace(/\./g, '');
+    if (quantity < 0) {
+        document.getElementById('responseMessage').textContent =
+            'La cantidad no puede ser negativa.';
+        document.getElementById('responseMessage').style.color = 'red';
+        return; // Evitar que se envíe el formulario
+    } else {
+        price = price.replace(/\./g, '');
+    }
 
     try {
         const response = await fetch('/api/products/add', {
