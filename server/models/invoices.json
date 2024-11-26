@@ -782,5 +782,19 @@
     ],
     "total": 120,
     "createdAt": "2024-11-25T23:09:33.439Z"
+  },
+  {
+    "id": 48,
+    "username": "prueba",
+    "items": [
+      {
+        "name": "Carro Prueba 2",
+        "price": 85,
+        "quantity": 1,
+        "total": 85
+      }
+    ],
+    "total": 85,
+    "createdAt": "2024-11-26T03:21:50.542Z"
   }
 ]

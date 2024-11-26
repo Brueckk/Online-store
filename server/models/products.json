@@ -33,5 +33,12 @@
     "description": "Hola tito parris",
     "price": 20,
     "quantity": -2
+  },
+  {
+    "id": 1732591281255,
+    "name": "Carro Prueba 2",
+    "description": "Esto es un carro de prueba",
+    "price": 85,
+    "quantity": 3
   }
 ]
