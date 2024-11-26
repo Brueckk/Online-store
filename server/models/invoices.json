@@ -796,5 +796,19 @@
     ],
     "total": 85,
     "createdAt": "2024-11-26T03:21:50.542Z"
+  },
+  {
+    "id": 49,
+    "username": "mango",
+    "items": [
+      {
+        "name": "carroPrueba",
+        "price": 1,
+        "quantity": 1,
+        "total": 1
+      }
+    ],
+    "total": 1,
+    "createdAt": "2024-11-26T11:17:31.645Z"
   }
 ]

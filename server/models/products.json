@@ -4,7 +4,7 @@
     "name": "carroPrueba",
     "description": "so",
     "price": 1,
-    "quantity": 108
+    "quantity": 107
   },
   {
     "id": 1732570051206,
@@ -40,5 +40,12 @@
     "description": "Esto es un carro de prueba",
     "price": 85,
     "quantity": 3
+  },
+  {
+    "id": 1732619954423,
+    "name": "Carro Pablo",
+    "description": "muy rapido",
+    "price": 100,
+    "quantity": 2
   }
 ]
